@@ -1,0 +1,16 @@
+<div *ngIf="task">
+  <div class="jumbotron">
+    
+    <h3 class="lead">{{task.name}}</h3>
+    <hr class="my-4">
+    <p class="text-primary">{{task.description}}</p>
+    <hr class="my-4">
+    <p class="text-primary"> <span>Deadline: </span>{{task.deadline}}</p>
+    <hr class="my-4">
+    <p class="lead">
+      <span><a class="btn btn-secondary" routerLink="/components/edit/{{id}}"> edit</a></span>
+      <span><a class="btn btn-secondary" (click)="delete()"> delete</a></span>
+    </p>
+  </div>
+
+</div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'digitalnotebook';
+
+  ngOnInit() : void {
+   firebase.initializeApp({
+      apiKey: 'AIzaSyBeIwxnRrLRB0jouaFRAKmYfBiNMnzB_T4',
+     authDomain: 'diginote-12d76.firebaseapp.com'
+   })
+  }
 }
